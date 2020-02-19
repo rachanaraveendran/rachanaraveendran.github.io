@@ -13,15 +13,11 @@
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
 	var initESW = function(gslbBaseURL) {
-                embedded_svc.settings.displayHelpButton = true; //Or false
-                embedded_svc.settings.language = 'en-GB'; //For example, enter 'en' or 'en-US'
+	  embedded_svc.settings.displayHelpButton = true; //Or false
+                embedded_svc.settings.language = 'en'; //For example, enter 'en' or 'en-US'
+        
                 embedded_svc.settings.defaultMinimizedText = 'Chat with Hive Helper'; //(Defaults to Chat with an Expert)
                 embedded_svc.settings.disabledMinimizedText = 'No Hive Agent'; //(Defaults to Agent Offline)
-                //embedded_svc.settings.externalScripts = ["CustomEvents_fromAgentToCustomer"];
-                embedded_svc.settings.widgetFontSize = '14px';
-                embedded_svc.settings.smallCompanyLogoImgURL = 'https://cdn.pixabay.com/photo/2016/08/20/05/38/avatar-1606916_960_720.png'; 
-                embedded_svc.settings.chatbotAvatarImgURL = 'http://res.cloudinary.com/hivehome/image/upload/iyy7vnw232bsnap6jijn';
-                embedded_svc.settings.avatarImgURL = "http://res.cloudinary.com/hivehome/image/upload/iyy7vnw232bsnap6jijn";
                 //embedded_svc.settings.loadingText = ''; //(Defaults to Loading)
                 //embedded_svc.settings.storageDomain = 'yourdomain.com'; //(Sets the domain for your deployment so that visitors can navigate subdomains during a chat session)
                 // Settings for Chat
@@ -33,8 +29,7 @@
                         if (prechatFormData[i].label == BTN_ID_LABEL) {
                             buttonId = prechatFormData[i].value;
                         }
-                    }
-                    console.log('PrechatFormdata' + JSON.stringify(prechatFormData, null, 1));
+                    }       
                     return buttonId;
                 };
                 //embedded_svc.settings.prepopulatedPrechatFields = {}; //Sets the auto-population of pre-chat form fields
@@ -53,6 +48,12 @@
                 {
                     "label": "locale",
                     "value": "en_GB",
+                    "transcriptFields": [],
+                    "displayToAgent": true
+                },
+                {
+                    "label": "CurrencyIsoCode",
+                    "value": "GBP",
                     "transcriptFields": [],
                     "displayToAgent": true
                 }
@@ -109,10 +110,18 @@
                         "doCreate": true,
                         "doFind": false,
                         "label": "locale",
+                    },
+                    {
+                        "isExactMatch": false,
+                        "fieldName": "CurrencyIsoCode",
+                        "doCreate": true,
+                        "doFind": false,
+                        "label": "CurrencyIsoCode",
                     }
                     ]
                 }
                 ];
+
 
 		embedded_svc.init(
 			'https://connectedhome.my.salesforce.com',
