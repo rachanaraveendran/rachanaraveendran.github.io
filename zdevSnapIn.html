@@ -62,6 +62,8 @@
 		    console.log('button ID ::: '+ buttonId);
                     return buttonId;
                 };
+		    		    alert('$$3'+embedded_svc.settings);
+
                 //embedded_svc.settings.prepopulatedPrechatFields = {}; //Sets the auto-population of pre-chat form fields
                 //embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
                 //embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
@@ -138,9 +140,9 @@
                     ]
                 }
                 ];
-		
+	    alert('$$3'+embedded_svc.liveAgentAPI);
+
 embedded_svc.liveAgentAPI.startChat('57320000000fxSk');
-		    alert('$$3');
 
 		embedded_svc.init(
 			'https://connectedhome--zdev.my.salesforce.com',
