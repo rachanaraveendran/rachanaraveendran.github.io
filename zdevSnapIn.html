@@ -155,17 +155,9 @@
 		);
 	};
 		
-embedded_svc.liveAgentAPI.startChat({
-	directToAgentRouting: {
-	buttonId: '57320000000fxSk',
-	// userId: “”,
-	fallback: true
-},
-extraPrechatInfo: [],
-extraPrechatFormDetails: []
-});
 
 	if (!window.embedded_svc) {
+		alert('$$1');
 		var s = document.createElement('script');
 		s.setAttribute('src', 'https://connectedhome--zdev.my.salesforce.com/embeddedservice/5.0/esw.min.js');
 		s.onload = function() {
@@ -173,6 +165,8 @@ extraPrechatFormDetails: []
 		};
 		document.body.appendChild(s);
 	} else {
+		alert('$$2');
+
 		initESW('https://service.force.com');
 	}
 </script>
