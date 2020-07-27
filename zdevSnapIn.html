@@ -142,7 +142,15 @@
                 ];
 	    alert('$$3'+embedded_svc.liveAgentAPI);
 
-embedded_svc.liveAgentAPI.startChat('57320000000fxSk');
+embedded_svc.liveAgentAPI.startChat({
+	 {
+	buttonId: '57320000000fxSk',
+	// userId: “”,
+	fallback: true
+},
+extraPrechatInfo: [],
+extraPrechatFormDetails: []
+});
 
 		embedded_svc.init(
 			'https://connectedhome--zdev.my.salesforce.com',
