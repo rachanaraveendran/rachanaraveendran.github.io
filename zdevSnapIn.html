@@ -154,6 +154,16 @@
 			}
 		);
 	};
+		
+embedded_svc.liveAgentAPI.startChat({
+	directToAgentRouting: {
+	buttonId: '57320000000fxSk',
+	// userId: “”,
+	fallback: true
+},
+extraPrechatInfo: [],
+extraPrechatFormDetails: []
+});
 
 	if (!window.embedded_svc) {
 		var s = document.createElement('script');
