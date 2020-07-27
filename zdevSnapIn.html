@@ -136,7 +136,16 @@
                 }
                 ];
 		
-
+		embedded_svc.liveAgentAPI.startChat({
+	directToAgentRouting: {
+	buttonId: '57320000000fxSk',
+	// userId: “”,
+	fallback: true
+},
+extraPrechatInfo: [],
+extraPrechatFormDetails: []
+});
+		    alert('$$3')
 
 		embedded_svc.init(
 			'https://connectedhome--zdev.my.salesforce.com',
@@ -153,15 +162,7 @@
 				isOfflineSupportEnabled: false
 			}
 		);
-		embedded_svc.liveAgentAPI.startChat({
-	directToAgentRouting: {
-	buttonId: '57320000000fxSk',
-	// userId: “”,
-	fallback: true
-},
-extraPrechatInfo: [],
-extraPrechatFormDetails: []
-});
+
 	};
 		
 
