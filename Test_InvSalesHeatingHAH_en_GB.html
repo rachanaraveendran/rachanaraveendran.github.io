@@ -12,7 +12,7 @@
 </style>
 
 <!-- Start of Invitations -->
-<div class="embeddedServiceInvitation" id="snapins_invite" inert aria-live="assertive" role="dialog" aria-atomic="true">
+<div class="embeddedServiceInvitation" id="snapins_invite" inert="true" aria-live="assertive" role="dialog" aria-atomic="true">
 	
 	<div class="embeddedServiceInvitationHeader" aria-labelledby="snapins_titletext" aria-describedby="snapins_bodytext">
 		<img id="embeddedServiceAvatar">
@@ -158,10 +158,10 @@
 			'00D1w0000000MYq',
 			'InvSalesHeatingHAH_en_GB',
 			{
-				baseLiveAgentContentURL: 'https://c.la1-c1cs-fra.salesforceliveagent.com/content',
+				baseLiveAgentContentURL: 'https://c.la1-c1cs-cdg.salesforceliveagent.com/content',
 				deploymentId: '57220000000fxSa',
 				buttonId: '5731w00000000Ni',
-				baseLiveAgentURL: 'https://d.la1-c1cs-fra.salesforceliveagent.com/chat',
+				baseLiveAgentURL: 'https://d.la1-c1cs-cdg.salesforceliveagent.com/chat',
 				eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I1w0000008OYcEAM_16eff45cb84',
 				isOfflineSupportEnabled: false
 			}
@@ -170,7 +170,7 @@
 
 	if (!window.embedded_svc) {
 		var s = document.createElement('script');
-		s.setAttribute('src', 'https://connectedhome--test.cs105.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+		s.setAttribute('src', 'https://connectedhome--test.my.salesforce.com/embeddedservice/5.0/esw.min.js');
 		s.onload = function() {
 			initESW(null);
 		};
